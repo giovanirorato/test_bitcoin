@@ -6,16 +6,17 @@ Ele utiliza a biblioteca [yfinance](https://pypi.org/project/yfinance/) para col
 
 ## Como usar
 
-1. Instale as dependências:
+1. Crie um ambiente virtual com o [uv](https://github.com/astral-sh/uv) e instale as dependências:
 
    ```bash
-   pip install -r requirements.txt
+   uv venv
+   uv pip install -r requirements.txt
    ```
 
 2. Execute o script, que irá buscar automaticamente todas as ações que possuem dividend yield anual de pelo menos 6%:
 
    ```bash
-   python dividend_fetcher.py
+   uv run python dividend_fetcher.py
 
-   Você pode utilizar os parâmetros `--max-pe` e `--max-payout` para aplicar filtros adicionais de valuation e sustentabilidade dos dividendos.
+   # Utilize `--max-pe` e `--max-payout` para filtros opcionais
    ```
